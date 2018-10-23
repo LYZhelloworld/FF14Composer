@@ -141,6 +141,7 @@ def main():
 	font = pygame.font.SysFont('Arial', 50)
 
 	running = True
+	line = []
 	while running:
 		event = pygame.event.wait()
 		if event.type == pygame.QUIT:
@@ -151,16 +152,23 @@ def main():
 			if event.key == pygame.K_ESCAPE:
 				running = False
 				break
+			elif event.key == pygame.K_BACKSPACE and event.type == pygame.KEYDOWN:
+				line = []
+			elif event.key == pygame.K_RETURN and event.type == pygame.KEYDOWN:
+				print(' '.join(line))
+				line = []
 			else:
 				composer.process_input(event)
 				new_note = get_note_name(composer.current_note)
 				screen.fill((0,0,0))
 				screen.blit(font.render(new_note, True, (255,255,255)), (0, 0))
 				pygame.display.update()
+				if new_note != '' and event.type == pygame.KEYDOWN:
+					line.append(new_note)
 
 	composer.close()
 	pygame.quit()
-	print()
+	input('Press any key to continue...')
 
 if __name__ == '__main__':
 	main()
