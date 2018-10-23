@@ -11,3 +11,10 @@ Key configurations (you cannot change it in current version without changing the
 * Shift = +1 octave
 * Ctrl = -1 octave
 (Please note that Ctrl+, does not work due to some unknown bug.)
+
+# Recording
+Now you can record the notes with the program. The notes will be shown in the command line interface.
+
+Every time you press the Enter key, the recorded notes will be displayed.
+
+Press Backspace to erase ALL recorded notes (but not including the ones on the CLI).
