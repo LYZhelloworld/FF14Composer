@@ -1,10 +1,11 @@
 import pygame, pygame.midi
 
 class Composer:
-	INSTRUMENT = 74 # Flute
-	#INSTRUMENT = 0 # Piano
 	VELOCITY = 127
-	NOTE_C_MIDDLE = 60
+	INSTRUMENT = 46; NOTE_C_MIDDLE = 84 # Harp, C5
+	#INSTRUMENT = 0; NOTE_C_MIDDLE = 72 # Grand piano, C4
+	#INSTRUMENT = 25; NOTE_C_MIDDLE = 72 # Steel guitar, C4
+	#INSTRUMENT = 45; NOTE_C_MIDDLE = 84 # Pizzicato, C5
 
 	NOTE_C = NOTE_C_MIDDLE
 	NOTE_C_SHARP = NOTE_C_MIDDLE + 1
