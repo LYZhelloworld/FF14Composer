@@ -10,7 +10,6 @@ class Composer:
 	#INSTRUMENT = 68 # Oboe
 	#INSTRUMENT = 71 # Clarinet
 	#INSTRUMENT = 72 # Piccolo
-	#INSTRUMENT = 75 # Piccolo
 
 	NOTE_C_MIDDLE = 72
 
@@ -161,7 +160,7 @@ def main():
 				running = False
 				break
 			elif event.key == pygame.K_BACKSPACE and event.type == pygame.KEYDOWN:
-				line = []
+				line = line[:-1]
 			elif event.key == pygame.K_RETURN and event.type == pygame.KEYDOWN:
 				print(' '.join(line))
 				line = []
